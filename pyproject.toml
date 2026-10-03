@@ -7,7 +7,9 @@ authors = [
     { name = "snr-roko", email = "rbbagyei@outlook.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "pydantic>=2.13.5",
+]
 
 [project.scripts]
 product-review-extractor = "product_review_extractor:main"
@@ -15,3 +17,9 @@ product-review-extractor = "product_review_extractor:main"
 [build-system]
 requires = ["uv_build>=0.12.19,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
